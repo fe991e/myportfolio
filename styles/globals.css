@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@300&display=swap');
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  overflow: hidden;
+}
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.layout {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url(/OmbreBG.jpg);
+  background-position: center;
+  animation: bg 50s infinite alternate;
+}
+.layout div:first-child {
+  max-width: 545px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  padding: 0.1em 1%;
+
+  border-bottom: 0.2rem solid white;
+  background: radial-gradient(closest-side, rgba(var(--bgc1), 0.3), white, rgba(255,255,255, 0.55));
+  opacity: 0.5;
+  box-shadow: 0 3px 7px rgba(var(--shadow),.9);
+}
+
+header > div:last-child {
+  float: right;
+}
+
+header button {
+  margin: auto 0.1em;
+}
+
+header button:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 3px rgba(184, 253, 66, 0.7), -2px -2px 5px rgb(116, 241, 241);
+}
+
+footer {
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  padding: 0.7% 3%;
+  user-select: none;
+  text-align: center;
+  background: -webkit-radial-gradient(center top, rgba(var(--bgc2), 0.35) 55%, rgba(255,255,255, 0.55), rgba(var(--bgc1), 0.45));
+  box-shadow: 0 -1px 5px rgba(var(--shadow),.9);
+}
+footer button {
+  color: #c91e54;
+  cursor: pointer;
+  background: radial-gradient(#a0f3d3bd, #f74d0a91);
+  border: 0.07rem solid #fba38091;
+  border-radius: 11%;
+  box-shadow: #a30538 0 -1px, #6c0727 0 -1.5px, #48041a 0 -4px 2px;
+}
+
+footer button:hover {
+  transform: translateY(-0.07rem);
+  background: #f74d0a91;
+  box-shadow: #6c0727 0 -1px, #48041a 0 -1.2px 1px;
+}
+
+nav {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  text-align: center;
+}
+nav > div {
+  transform-origin: top;
+  transform: scaleY(0);
+  transition: all 1s ease-in;
+}
+nav a {
+  height: auto;
+  width: auto;}
+
+nav * {
+  font-size: 1rem;
+  padding: .5rem;
+  color: #b0fdfd18;
+  font-weight: 555;
+  text-shadow: var(--txt-shadow);
+}
+
+nav > button {
+  display: inline-block;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transform: rotate(90deg);
+}
+
+ @keyframes bg {
+  25% {
+    background-position: center left;
+  }
+  50% {
+    background-position: center top;
+  }
+  75% {
+    background-position: center right;
+  }
+  100% {
+    background-position: center bottom;
+  }
+ }
+ @keyframes shine {
+   from {
+     color: linear-gradient(rgb(164, 251, 150), gold);
+   }
+   to {
+     color: red;
+   }
+ }
+
+ :root {
+  --cardShadowC1: #b9fafa;
+  --txt-shadow: -0.25px 0.25px 0 #f9f1ed, 0.3px 0 0 black, -0.5px 0.5px 0 #05205c, -0.6px 0.6px 0 #872b06, -0.7px 0.7px 0 #762707, -0.8px 0.8px 1px #972e04;
+  --cardShadow:
+  -20px -20px 30px -25px var(--cardShadowC1), 
+  20px 20px 30px -25px var(--cardShadowC1),
+  0 0 13px 4px rgba(255,255,255,0.3),
+  0 55px 35px -20px rgba(0, 0, 0, 0.5);
+  --holoShadowFr:
+  0 -75px 5px rgba(0,252,252, .15), 0 -1px 2px rgba(0,252,252, .5),
+  0 -45px 5px rgba(0,252,252, .15), 0 -2px 3px rgba(0,252,252, .5),
+  0 -3px 4px rgba(0,252,252, .5), 0 -4px 6px rgba(0,252,252, .5),
+  0 -5px 10px rgba(0,252,252, .75), 0 -7px 20px rgba(0,252,252, .75),
+  0 -10px 30px rgba(0,252,252, .75), 0 -15px 40px rgba(0,252,252, .75),
+  0 -25px 50px rgba(0,252,252, .75), 0 -35px 60px rgba(0,252,252, .85),
+  0 -45px 70px rgba(0,252,252, .95), 0 -65px 80px rgba(0,252,252, 1),
+  0 -75px 90px rgba(0,252,252, 1);
+  --holoShadowTo:
+  0 -1px 5px rgba(0,252,252, .15), 0 -1px 2px rgba(0,252,252, .5),
+  0 -1px 5px rgba(0,252,252, .15), 0 -2px 3px rgba(0,252,252, .5),
+  0 -3px 4px rgba(0,252,252, .5), 0 -4px 6px rgba(0,252,252, .5),
+  0 -5px 7px rgba(0,252,252, .75), 0 -7px 10px rgba(0,252,252, .75),
+  0 -10px 15px rgba(0,252,252, .75), 0 -15px 20px rgba(0,252,252, .75),
+  0 -25px 25px rgba(0,252,252, .75), 0 -35px 30px rgba(0,252,252, .85),
+  0 -45px 35px rgba(0,252,252, .95), 0 -65px 40px rgba(0,252,252, 1),
+  0 -75px 50px rgba(0,252,252, 1);
+
+  --highlight: 231, 250, 250;
+  --shadow: 1,38,69;
+  --bgc1: 250,85,205;
+  --bgc2: 255,129,125;
+}
