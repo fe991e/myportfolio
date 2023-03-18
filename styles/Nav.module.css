@@ -1,0 +1,77 @@
+
+.nav a::before {
+    height: 0;
+    width: 1%;
+    content: '';
+    position: relative;
+    left: 13%;
+    background: aqua;
+    animation: sparksdown 2s ease-in forwards;
+}
+/* .nav a:first-child::before {
+    left: 13%;
+}
+.nav a:nth-child(2)::before {
+    left: 50%;
+}
+.nav a:nth-child(3)::before {
+    right: 13%;
+} */
+
+.navlinks {
+    width: auto;
+    height: auto;
+    transform: scaleY(1);
+}
+.navlinks::before {
+    height: 1%;
+    width: 0;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background: aliceblue;
+    animation: sparks 2s ease-in forwards;
+}
+
+.btn {
+    transform: rotate(270deg);
+}
+
+.notif_cont {
+    background-color: rgba(111, 247, 96, 0.485);
+    color: rgb(170, 25, 97);
+    height: inherit;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    border-radius: 15%;
+    text-align: center;
+}
+
+.notif_cont::before {
+    content: 'Email Copied to Clipboard';
+}
+
+@keyframes sparks {
+    0% {
+        width: 1%;
+    }
+    75% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+}
+@keyframes sparksdown {
+    0% {
+        height: 1%;
+    }
+    75% {
+        height: 100%;
+    }
+    100% {
+        height: 0;
+    }
+}
