@@ -18,7 +18,7 @@ body {
   align-items: center;
   justify-content: center;
 
-  background-image: url(/OmbreBG.jpg);
+  background-image: url(https://raw.githubusercontent.com/fe991e/myportfolio/master/public/OmbreBG.jpg);
   background-position: center;
   animation: bg 50s infinite alternate;
 }

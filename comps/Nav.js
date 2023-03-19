@@ -3,6 +3,7 @@ import styles from '../styles/Nav.module.css'
 import { useState } from 'react';
 
 const Nav = () => {
+    navigator.clipboard.writeText("febbieroseb.rmt@gmail.com");
     const [display, setDisplay] = useState(false);
     
     const toggleNav = () => {
