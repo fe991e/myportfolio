@@ -17,7 +17,7 @@ const Projects = () => {
                             <li>MongoDB, Express, NodeJS, MapBox</li>
                             <li><Link href="https://github.com/fe991e/localcrafts">Repo: Github</Link></li>
                         </ul>
-                        <Link href="https://github.com/fe991e/localcrafts"><a>Visit Repo</a></Link>
+                        <Link href="https://fierce-garden-44681.herokuapp.com/"><a>Visit Site</a></Link>
                     </section>
                     <section>
                         <div>
@@ -30,7 +30,7 @@ const Projects = () => {
                             <li>JAVA, MySQL, Spring(Boot, Security), MAVEN</li>
                             <li><Link href="https://github.com/fe991e/mycrmapp">Repo: Github</Link></li>
                         </ul>
-                        <Link href="https://github.com/fe991e"><a>Visit Repo</a></Link>
+                        <Link href="https://github.com/fe991e"><a>Visit Site</a></Link>
                     </section>
                     <section>
                         <div>
