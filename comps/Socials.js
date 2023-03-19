@@ -7,6 +7,7 @@ const Socials = () => {
     const [display, setDisplay] = useState(false);
     
     const copyToClipboard = () => {
+        navigator.clipboard.writeText("febbieroseb.rmt@gmail.com");
         setDisplay(true)
   
         setTimeout(function(){
